@@ -3,7 +3,8 @@ import json
 import argparse
 import requests
 
-iq_url, creds, iq_session, LTGs, licenses = "", "", requests.Session(), {}, {}
+iq_url, creds, LTGs, licenses = "", "", {}, {}
+iq_session = requests.Session()
 iq_session.cookies.set('CLM-CSRF-TOKEN', 'api')
 iq_headers = {'X-CSRF-TOKEN': 'api'}
 
